@@ -1,34 +1,34 @@
 package messages
 
 import (
-        "time"
-        "math"
+	"math"
+	"time"
 )
 
 type GrillTemp struct {
-        Temp Temp
-        Time time.Time
-        Location Location
+	Temp     Temp
+	Time     time.Time
+	Location Location
 }
 
 type FoodTemp struct {
-        Temp Temp
-        Time time.Time
-        Location Location
+	Temp     Temp
+	Time     time.Time
+	Location Location
 }
 
 type GrillTarget struct {
-        Temp Temp
-        Time time.Time
+	Temp Temp
+	Time time.Time
 }
 
 type FoodTarget struct {
-        Temp Temp
-        Time time.Time
+	Temp Temp
+	Time time.Time
 }
 
 type FanStatus struct {
-        FanOn bool
+	FanOn bool
 }
 
 // Temp is a temperature in Celcius
