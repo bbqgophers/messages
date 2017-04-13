@@ -38,11 +38,7 @@ type Temp int
 
 // custom json marshal to F
 func (t Temp) MarshalJSON() ([]byte, error) {
-	return json.Marshal(&struct {
-		Temp int `json:"temp"`
-	}{
-		Temp: t.F(),
-	})
+	return json.Marshal(t.F())
 }
 
 // C returns the temperature in Celcius
