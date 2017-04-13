@@ -1,6 +1,7 @@
 package messages
 
 import (
+	"encoding/json"
 	"math"
 	"time"
 )
@@ -34,6 +35,15 @@ type FanStatus struct {
 
 // Temp is a temperature in Celcius
 type Temp int
+
+// custom json marshal to F
+func (t Temp) MarshalJSON() ([]byte, error) {
+	return json.Marshal(&struct {
+		Temp int `json:"temp"`
+	}{
+		Temp: t.F(),
+	})
+}
 
 // C returns the temperature in Celcius
 func (t *Temp) C() int {
