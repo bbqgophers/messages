@@ -28,7 +28,7 @@ type FoodTarget struct {
 }
 
 type FanStatus struct {
-	FanOn bool
+	FanOn int `json:"fan_on"`
 }
 
 // Temp is a temperature in Celcius
